@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title> Chave simétrica </title>
+    </head>
+
+    <body>
+
+        
+            <input class="input"/>
+            <button class="botao-codifica"><h4>Codificar!</h4></button>
+            <button class="botao-decodifica"><h4>Decodificar!</h4></button>
+            
+            <script>
+
+                 function pulaLinha() {
+                    document.write("<br>")
+                }
+
+                function mostra(frase) {
+                    document.write(frase);
+                    pulaLinha();
+                }
+
+                var textoCodificar= document.querySelector("input"); // Puxa o valor colocado na tag input
+
+                var botaoCodifica= document.querySelector(".botao-codifica") // Puxa o valor do botão para codificar
+
+                var botaoDecodifica= document.querySelector(".botao-decodifica") // Nem preciso explicar né?
+
+                
+                function codifica(){
+                    //A letra "e" é convertida para "enter"
+                    //A letra "i" é convertida para "imes"
+                    //A letra "a" é convertida para "ai"
+                    //A letra "o" é convertida para "ober"
+                    //A letra "u" é convertida para "ufat"
+                    const padrao1=["a","e","i","o","u"] // Lista dos padrões de criptografia fornecidos
+                    const padrao2=["ai","enter","imes","ober","ufat"];// Lista dos padrões de criptografia fornecidos
+
+                    var arrayCod= Array.from(textoCodificar.value); // Transforma o input em um array.
+                                     
+                    for(var i=0;i<arrayCod.length;i++){
+                        if(arrayCod[i]==padrao1){
+                            
+                        }
+                    }
+
+                    
+
+                    var output = select(arrayCod, padrao);
+                    console.log(output); 
+
+                    //decodificacao= arrayCod.join("");
+                    //console.log(decodificacao);
+                    
+                }
+
+                function decodifica(){
+
+                }
+
+                botaoCodifica.onclick=codifica;
+            </script>
+
+               
+
+                
+
+            
+                
+        
+
+        <footer>
+            <p> &copy; Copyright Gustavão Almeidão! <p>
+            <a href="https://www.linkedin.com/in/gustavo-saturnino/"> Linkedinho do pai </a>
+            
+        </footer>
+    </body>
+</html>
