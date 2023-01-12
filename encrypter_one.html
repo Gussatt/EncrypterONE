@@ -9,11 +9,13 @@
     <body>
 
         
-            <textarea id="texto-descodificado"></textarea>
-            <button class="botao-medio" id="botao-codifica"><h4>Codificar!</h4></button>
+            <textarea type="text" id="texto-descodificado" name=""></textarea>
+            <button class="botao-medio" id="botao-codifica" onclick="codifica()" ><h4>Codificar!</h4></button>
             <textarea id="texto-codificado"></textarea>
-            <button class="botao-medio" id="botao-decodifica"><h4>Decodificar!</h4></button>
+            <button class="botao-medio" id="botao-decodifica" onclick="decodifica()"><h4>Decodificar!</h4></button>
             
+            <button class="botao-pequeno" id="botao-copia-codificador"><img src="copy.png" class="img-botao"></button>
+
             <script>
 
                  function pulaLinha() {
@@ -25,30 +27,42 @@
                     pulaLinha();
                 }
 
-                var textoDescodificado= document.getElementById("texto-descodificado"); // Puxa o valor colocado na tag textarea
+                const textoDescodificado= document.getElementById("texto-descodificado"); // Puxa o valor colocado na tag textarea
+                const textoCodificado= document.getElementById("texto-codificado"); // Puxa o valor do textarea já codificado
+                const botaoCodifica= document.getElementById("botao-codificado"); // Puxa o valor do botão para codificar
+                const botaoDecodifica= document.getElementById("botao-decodifica"); // Nem preciso explicar né?
 
-                var textoCodificado= document.getElementById("texto-codificado");
-
-                var botaoCodificado= document.getElementById("botao-codificado"); // Puxa o valor do botão para codificar
-
-                var botaoDecodifica= document.getElementById("botao-decodifica"); // Nem preciso explicar né?
-
-                
+                let cripto= "";
                 
                 function codifica(){
                     
-                    //A letra "e" é convertida para "enter"
-                    //A letra "i" é convertida para "imes"
-                    //A letra "a" é convertida para "ai"
-                    //A letra "o" é convertida para "ober"
-                    //A letra "u" é convertida para "ufat"
+                    cripto= textoDescodificado.value.replace(/e/g, "enter"); //A letra "e" é convertida para "enter"
+                    cripto= cripto.replace(/i/g, "imes"); //A letra "i" é convertida para "imes"
+                    cripto= cripto.replace(/a/g, "ai"); //A letra "a" é convertida para "ai"
+                    cripto= cripto.replace(/o/g, "ober"); //A letra "o" é convertida para "ober"
+                    cripto= cripto.replace(/u/g, "ufat"); //A letra "u" é convertida para "ufat"
+                
+                    textoCodificado.value=cripto;
                 }
+
+                let decripto= "";
 
                 function decodifica(){
+                    
+                    decripto= cripto.replace(/enter/g, "e");
+                    decripto= decripto.replace(/imes/g, "i");
+                    decripto= decripto.replace(/ai/g, "a");
+                    decripto= decripto.replace(/ober/g, "o");
+                    decripto= decripto.replace(/ufat/g, "u");
+
+                    textoDescodificado.value=decripto;
+                }
+                
+                function copiar(){
+
 
                 }
-
-                botaoCodifica.onclick=codifica;
+                
             </script>
 
                
