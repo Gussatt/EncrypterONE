@@ -1,6 +1,9 @@
 const textoInput= document.getElementById("texto-input"); // Puxa o valor colocado na tag textarea
 const textoOutput= document.getElementById("texto-output"); // Puxa o valor do textarea já codificado
+const botaoDecodifica= document.getElementById("botao-decodifica"); // Nem preciso explicar né?
+const botaoCodifica= document.getElementById("botao-codifica"); // Puxa o valor do botão para codificar
 const botaoCopia= document.getElementById("botao-copia"); // Puxa o valor do botão de copiar
+const botaoLimpa= document.getElementById("botao-limpa"); // Puxao o valor do botão de limpar
 
 let cripto= "";
                 
@@ -43,17 +46,16 @@ function copiar(){
     navigator.clipboard.writeText(textoCopiado.value);
 }
 
-document.addEventListener("DOMContentLoaded",() =>{
-    const botaoCodifica= document.getElementById("botao-codifica"); // Puxa o valor do botão para codificar
+function limpar(){
 
-    botaoCodifica.addEventListener("click", codifica);
-});
+    textoOutput.value= "";
+    textoInput.value= "";
 
-document.addEventListener("DOMContentLoaded",() =>{
-    const botaoDecodifica= document.getElementById("botao-decodifica"); // Nem preciso explicar né?
+}
 
-    botaoDecodifica.addEventListener("click", decodifica);
-});
+//Adição de funcionalidades aos botões 
 
+botaoCodifica.addEventListener("click", codifica); 
+botaoDecodifica.addEventListener("click", decodifica);
 botaoCopia.addEventListener("click", copiar);
-
+botaoLimpa.addEventListener("click", limpar);
