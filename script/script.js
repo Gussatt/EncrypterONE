@@ -9,21 +9,24 @@ let cripto= "";
                 
 function codifica(){
     
+    if(checaLetras(textoInput)==true){
 
-    cripto= textoInput.value.replace(/e/g, "enter"); //A letra "e" é convertida para "enter"
-    cripto= cripto.replace(/i/g, "imes"); //A letra "i" é convertida para "imes"
-    cripto= cripto.replace(/a/g, "ai"); //A letra "a" é convertida para "ai"
-    cripto= cripto.replace(/o/g, "ober"); //A letra "o" é convertida para "ober"
-    cripto= cripto.replace(/u/g, "ufat"); //A letra "u" é convertida para "ufat"
-                
-    textoOutput.value=cripto;
+        cripto= textoInput.value.replace(/e/g, "enter"); //A letra "e" é convertida para "enter"
+        cripto= cripto.replace(/i/g, "imes"); //A letra "i" é convertida para "imes"
+        cripto= cripto.replace(/a/g, "ai"); //A letra "a" é convertida para "ai"
+        cripto= cripto.replace(/o/g, "ober"); //A letra "o" é convertida para "ober"
+        cripto= cripto.replace(/u/g, "ufat"); //A letra "u" é convertida para "ufat"
                     
+        textoOutput.value=cripto;
+
+    }  
 }
 
-let decripto= "";
 
 function decodifica(){
-                    
+     
+    let decripto= "" ;
+
     decripto= cripto.replace(/enter/g, "e"); //Enter vira e
     decripto= decripto.replace(/imes/g, "i"); //Imes vira i
     decripto= decripto.replace(/ai/g, "a"); //Ai vira a
@@ -51,6 +54,19 @@ function limpar(){
     textoOutput.value= "";
     textoInput.value= "";
 
+}
+
+function checaLetras(inputTxt){
+
+    const regexLetras= /^[a-z]+$/;
+
+    if(inputTxt.value.match(regexLetras)){
+        return true
+    }
+
+    else{
+        alert("Insira apenas letras minúsculas, sem caracteres especiais ou acentos.")
+    }
 }
 
 //Adição de funcionalidades aos botões 

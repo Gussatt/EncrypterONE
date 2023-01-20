@@ -2,24 +2,32 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles/style.css">
         <title> Bombe </title>
     </head>
 
     <body>
 
-        <textarea type="text" id="texto-input"></textarea> <!-- Área de input de texto -->
-        <button class="botao-medio" id="botao-codifica"><h4>Codificar!</h4></button> <!-- Botão para codificação -->
-        <textarea id="texto-output"></textarea> <!-- Área de output de texto de texto -->
-        <button class="botao-medio" id="botao-decodifica" ><h4>Decodificar!</h4></button> <!-- Botão para decodificação -->
-        <button class="botao-pequeno" id="botao-copia"><img src="copy.png" class="img-botao"></button> <!-- Botão para copiar para a área de transferência -->
-        <button class="botao-pequeno" id="botao-limpa"> Limpar</button> <!-- Botão para copiar para limpar Input e Output -->
+        <header>
+            <h1>A máquina de criptologistas</h1>
+        </header>
+        
+        
+        <main>
+            <textarea type="text" id="texto-input" cols="60" rows="20" autofocus></textarea> <!-- Área de input de texto -->
+            <button class="botao-medio" id="botao-codifica"><h4>Codificar!</h4></button> <!-- Botão para codificação -->
+            <textarea id="texto-output" cols="60" rows="20"></textarea> <!-- Área de output de texto de texto -->
+            <button class="botao-medio" id="botao-decodifica"><h4>Decodificar!</h4></button> <!-- Botão para decodificação -->
+            <button class="botao-pequeno" id="botao-copia"><img src="imagens/copy.png" class="img-botao"></button> <!-- Botão para copiar para a área de transferência -->
+            <button class="botao-pequeno" id="botao-limpa"> Limpar</button> <!-- Botão para copiar para limpar Input e Output -->
 
-        <script src="script.js"></script>
+            <script src="script/script.js"></script>
+        </main>
 
         <footer>
             <p> &copy; Copyright Gustavão Almeidão! <p>
-            <a href="https://www.linkedin.com/in/gustavo-saturnino/"> Linkedinho do pai </a>
+            <a href="https://www.linkedin.com/in/gustavo-saturnino/"><img src="imagens/linkedin.png" class= "img-icone"></a>
+            <a href="https://www.github.com/gussatt"><img src="imagens/github.png" class="img-icone"></a>
         </footer>
     </body>
 </html>
