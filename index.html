@@ -1,55 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/reset.css">
-        <title> Bombe </title>
-    </head>
 
-    <body>
-        <header>
-            <section class="box">
-                <img src="imagens/icon.jfif" class="img-icone-grande"><h1 class="titulo-centralizado">A máquina dos criptologistas</h1>
-            </section>
-        </header>
-        
-        
-        <main>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-            <div class="input-area">
-                <textarea type="text" id="texto-input" cols="60" rows="20" autofocus>Digite sua mensagem</textarea>
+    <title> Bombe </title>
+
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <section class="box">
+            <div class="titulo-principal">
+                <img src="imagens/turing.png" class="img-turing" alt="Alan Turing cartunizado">
+                <h1 class="titulo-centralizado">A bomba eletromecânica</h1>
             </div>
-            
-            <div class="output-area">
-            <textarea id="texto-output" cols="60" rows="20"></textarea>
-            </div>
-            
-            <div>
-                <button class="botao-medio" id="botao-codifica">
-                    <svg class="icon icon-lock">
-                        <use xlink:href="imagens/icons.svg#icon-lock"></use>
-                    </svg>
-                </button>
-            </div>
+        </section>
+    </header>
 
-                <button class="botao-medio" id="botao-decodifica"><h4></h4></button> <!-- Botão para decodificação -->
-                <button class="botao-pequeno" id="botao-copia"></button> <!-- Botão para copiar para a área de transferência -->
-                <button class="botao-pequeno" id="botao-limpa"> Limpar</button> <!-- Botão para copiar para limpar Input e Output -->
-           
 
-          
-            </button> 
-            
+    <main>
 
-            <script src="script/script.js"></script>
-        </main>
+        <div class="input-area">
+            <textarea type="text" id="texto-input" cols="30" rows="30" style="resize: none" autofocus></textarea>
+        </div>
 
-        <footer>
-            <p> &copy; Copyright Gustavão Almeidão! <p>
-            <a href="https://www.linkedin.com/in/gustavo-saturnino/"><img src="imagens/linkedin.png" class= "img-icone"></a>
+        <div class="output-area">
+            <textarea type="text" id="texto-output" cols="30" rows="30" style="resize: none"></textarea>
+        </div>
+
+        <ul class="funcionalidades">
+
+            <il>
+                <div class="botao-pequeno">
+                    <button id="botao-codifica">
+                        <svg class="icon icon-defend">
+                            <use xlink:href="imagens/icons.svg#icon-defend"></use>
+                        </svg>
+                    </button>
+                </div>
+            </il>
+
+            <il>
+                <div class="botao-pequeno">
+                    <button id="botao-decodifica">
+                        <svg class="icon icon-lock">
+                            <use xlink:href="imagens/icons.svg#icon-lock"></use>
+                        </svg>
+                    </button>
+                </div>
+            </il>
+
+            <il>
+                <div>
+                    <button id="botao-copia">
+                        <svg class="icon icon-copy">
+                            <use xlink:href="imagens/icons.svg#icon-copy"></use>
+                        </svg>
+                    </button>
+                </div>
+            </il>
+
+            <il>
+                <div class="botao-pequeno">
+                    <button id="botao-limpa">
+                        <svg class="icon icon-delete">
+                            <use xlink:href="imagens/icons.svg#icon-copy"></use>
+                        </svg>
+                    </button>
+                </div>
+            </il>
+        </ul>
+
+        <script src="script/script.js"></script>
+    </main>
+
+    <footer>
+        <p> &copy; Copyright Gustavão Almeidão!
+        <p>
+            <a href="https://www.linkedin.com/in/gustavo-saturnino/"><img src="imagens/linkedin.png"
+                    class="img-icone"></a>
             <a href="https://www.github.com/gussatt"><img src="imagens/github.png" class="img-icone"></a>
-        </footer>
-    </body>
+    </footer>
+</body>
+
 </html>

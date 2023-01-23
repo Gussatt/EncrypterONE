@@ -1,6 +1,7 @@
-body{
-
+body, textarea{
+    font-family: 'Special Elite', sans-serif, cursive;
 }
+
 header{
     padding: 20px 0;
 }
@@ -9,34 +10,33 @@ header{
     position: relative;
     width: 940px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .titulo-centralizado{
-    font-size:2em;
+    font-size:3em;
     display: inline;
     vertical-align:middle;
+       
 }
 
-.img-icone-grande{
-    height: 100px;
-    width: 100px;
+.img-turing{
+    height: 200px;
+    width: 200px;
     margin: 10px 10px 10px 10px;
     vertical-align:middle;
-    border: black;
-    border-radius: 10px;
+    right: 300px;
 }
 
-.botao-medio{
-    height: 60px;
-    width: 60px;
-    padding: 0 0;
+
+body{
+    background: #f5f2d0;
 }
 
-.img-botao{
-    height: 60px;
-    width: 60px;
+.input-area, .output-area{
+    display: inline-block;
 }
+
 
 .img-icone{
     height: 60px;
@@ -52,4 +52,5 @@ header{
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
-  }
+}
+
