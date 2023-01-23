@@ -1,6 +1,41 @@
+body{
+
+}
+header{
+    padding: 20px 0;
+}
+
+.box{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-centralizado{
+    font-size:2em;
+    display: inline;
+    vertical-align:middle;
+}
+
+.img-icone-grande{
+    height: 100px;
+    width: 100px;
+    margin: 10px 10px 10px 10px;
+    vertical-align:middle;
+    border: black;
+    border-radius: 10px;
+}
+
+.botao-medio{
+    height: 60px;
+    width: 60px;
+    padding: 0 0;
+}
+
 .img-botao{
-    height: 40px;
-    width: 20px
+    height: 60px;
+    width: 60px;
 }
 
 .img-icone{
@@ -9,3 +44,12 @@
     text-decoration: none;
     margin: 10px 10px;
 }
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
