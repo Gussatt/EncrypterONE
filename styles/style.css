@@ -42,34 +42,30 @@ textarea{
     background-image: url("https://www.photos-public-domain.com/wp-content/uploads/2011/11/ivory-off-white-paper-texture-with-flecks.jpg");
     padding: 40px 20px 20px 20px;
     font-size: 2em;
+    vertical-align: middle;
 }
 
 .text-areas{
     box-sizing: border-box;
     text-align: center;
+    padding: 40px;
 }
 
 div .input{
-    width:70%;
-    height: 400px;
+    width:50%;
+    height: 200px;
 }
 
 div .output{
-    width:20%;
-    height: 500px;
+    width:30%;
+    height: 300px;
 }
-
-.botoes-entre{
-    display: inline-block;
-    position: absolute;
-}
-
 
 .img-icone{
     height: 60px;
     width: 60px;
     text-decoration: none;
-    margin: 10px 10px;
+    
 }
 
 .icon {
@@ -79,5 +75,55 @@ div .output{
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+}
+
+.btn-small {
+    position: absolute;
+    float: none;
+    text-align: center;
+    display: inline-block;
+}
+
+#encrypt{
+    left:100px;
+}
+
+.btn-prop{
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid brown;
+    background:brown;
+    color: #fff;
+    transition: width 0.7s;
+}
+
+.btn-prop:hover{
+    width:180px;
+    transition:width 0.7s;
+}
+
+.btn-prop i{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.btn-prop:hover i{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.btn-prop .btn-text{
+    opacity: 0;
+    font-family: 'Special Elite', sans-serif, cursive; ;
+    transition: opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.btn-prop:hover .btn-text{
+    opacity: 1;
+    transition: opacity 0.5s
 }
 

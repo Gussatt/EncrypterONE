@@ -26,56 +26,86 @@
         </section>
     </header>
 
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-delete" viewBox="0 0 24 24">
+                <path d="M18.984 3.984v2.016h-13.969v-2.016h3.469l1.031-0.984h4.969l1.031 0.984h3.469zM6 18.984v-12h12v12q0 0.797-0.609 1.406t-1.406 0.609h-7.969q-0.797 0-1.406-0.609t-0.609-1.406z"></path>
+            </symbol>
+            <symbol id="icon-lock" viewBox="0 0 32 32">
+                <path d="M16 20v-4h4v8h-16v-8h4v4h8zM12 8v8h4v-4h8v4h4v-8h-16z"></path>
+            </symbol>
+            <symbol id="icon-defend" viewBox="0 0 32 32">
+                <path d="M24 4v16l-8 8-8-8v-16h16z"></path>
+            </symbol>
+            <symbol id="icon-copy" viewBox="0 0 32 32">
+                <path d="M4 12h16v16h-16v-16zM12 4v4h12v12h4v-16h-16z"></path>
+            </symbol>
+        </defs>
+    </svg>
 
     <main>
+
+        <ul class="funcionalidades">
+            <il class="encrypt">
+                <div class="btn-small" id="encrypt">
+                    <button id="botao-codifica" class="btn-prop">
+                        <i>
+                            <svg class="icon icon-defend">
+                                <use xlink:href="#icon-defend"></use>
+                            </svg>
+                        </i>
+                        <span class="btn-text">Codifica</span>
+                    </button>
+                </div>
+            </il>
+
+        
+            <il class="decrypt">
+                <div class="btn-small" id="decrypt">
+                    <button id="botao-decodifica" class="btn-prop">
+                        <i>
+                            <svg class="icon icon-lock">
+                                <use xlink:href="#icon-lock"></use>
+                            </svg>
+                        </i>
+                        <span class="btn-text">Decodifica</span>
+                    </button>
+                </div>
+            </il>
+
+            <il class="copy">
+                <div class="btn-small" id="copy">
+                    <button id="botao-copia" class="btn-prop">
+                        <i>
+                            <svg class="icon icon-copy">
+                                <use xlink:href="#icon-copy"></use>
+                            </svg>
+                        </i>
+                        <span class="btn-text">Copiar</span>
+                    </button>
+                </div>
+            </il>
+
+            <il class="clean">
+                <div class="btn-small" id="clean">
+                    <button id="botao-limpa" class="btn-prop">
+                        <i>
+                            <svg class="icon icon-delete">
+                                <use xlink:href="#icon-delete"></use>
+                            </svg>
+                        </i>
+                        <span class="btn-text">Limpar</span>
+                    </button>
+                </div>
+            </il>
+        </ul>
 
         <div class="text-areas">
             <textarea class="input" type="text" id="texto-input" cols="30" rows="30" style="resize: none" autofocus></textarea>
                
             <textarea class="output" type="text" id="texto-output" cols="30" rows="30" style="resize: none"></textarea>
         </div>
-        
-        <ul class="funcionalidades">
-            <il>
-                <div class="botao-pequeno">
-                    <button id="botao-codifica">
-                        <svg class="icon icon-defend">
-                            <use xlink:href="imagens/icons.svg#icon-defend"></use>
-                        </svg>
-                    </button>
-                </div>
-            </il>
-
-            <il>
-                <div class="botao-pequeno">
-                    <button id="botao-decodifica">
-                        <svg class="icon icon-lock">
-                            <use xlink:href="imagens/icons.svg#icon-lock"></use>
-                        </svg>
-                    </button>
-                </div>
-            </il>
-
-            <il>
-                <div class="botao-pequeno">
-                    <button id="botao-copia">
-                        <svg class="icon icon-copy">
-                            <use xlink:href="imagens/icons.svg#icon-copy"></use>
-                        </svg>
-                    </button>
-                </div>
-            </il>
-
-            <il>
-                <div class="botao-pequeno">
-                    <button id="botao-limpa">
-                        <svg class="icon icon-delete">
-                            <use xlink:href="imagens/icons.svg#icon-copy"></use>
-                        </svg>
-                    </button>
-                </div>
-            </il>
-        </ul>
+                     
 
         <script src="script/script.js"></script>
     </main>
