@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title> Bombe </title>
+    <link rel="icon" type="image/png" href="imagens/favicon.png"/>
+    <title>
+        Bombe
+    </title>
 
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
@@ -27,16 +29,13 @@
 
     <main>
 
-        <div class="input-area">
-            <textarea type="text" id="texto-input" cols="30" rows="30" style="resize: none" autofocus></textarea>
+        <div class="text-areas">
+            <textarea class="input" type="text" id="texto-input" cols="30" rows="30" style="resize: none" autofocus></textarea>
+               
+            <textarea class="output" type="text" id="texto-output" cols="30" rows="30" style="resize: none"></textarea>
         </div>
-
-        <div class="output-area">
-            <textarea type="text" id="texto-output" cols="30" rows="30" style="resize: none"></textarea>
-        </div>
-
+        
         <ul class="funcionalidades">
-
             <il>
                 <div class="botao-pequeno">
                     <button id="botao-codifica">
@@ -58,7 +57,7 @@
             </il>
 
             <il>
-                <div>
+                <div class="botao-pequeno">
                     <button id="botao-copia">
                         <svg class="icon icon-copy">
                             <use xlink:href="imagens/icons.svg#icon-copy"></use>

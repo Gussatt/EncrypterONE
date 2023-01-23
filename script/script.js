@@ -9,17 +9,18 @@ let cripto= "";
                 
 function codifica(){
     
-    if(checaLetras(textoInput)==true){
+    cripto= textoInput.value;
+    cripto= cripto.toLowerCase();
 
-        cripto= textoInput.value.replace(/e/g, "enter"); //A letra "e" é convertida para "enter"
-        cripto= cripto.replace(/i/g, "imes"); //A letra "i" é convertida para "imes"
-        cripto= cripto.replace(/a/g, "ai"); //A letra "a" é convertida para "ai"
-        cripto= cripto.replace(/o/g, "ober"); //A letra "o" é convertida para "ober"
-        cripto= cripto.replace(/u/g, "ufat"); //A letra "u" é convertida para "ufat"
+    cripto= cripto.replace(/e/g, "enter"); //A letra "e" é convertida para "enter"
+    cripto= cripto.replace(/i/g, "imes"); //A letra "i" é convertida para "imes"
+    cripto= cripto.replace(/a/g, "ai"); //A letra "a" é convertida para "ai"
+    cripto= cripto.replace(/o/g, "ober"); //A letra "o" é convertida para "ober"
+    cripto= cripto.replace(/u/g, "ufat"); //A letra "u" é convertida para "ufat"
                     
-        textoOutput.value=cripto;
+    textoOutput.value=cripto;
 
-    }  
+
 }
 
 
@@ -65,7 +66,7 @@ function checaLetras(inputTxt){
     }
 
     else{
-        alert("Insira apenas letras minúsculas, sem caracteres especiais ou acentos.")
+        
     }
 }
 
