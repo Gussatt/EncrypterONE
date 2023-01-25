@@ -1,122 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="imagens/favicon.png"/>
-    <title>
-        Bombe
-    </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+
+    <title>Bombe</title>
 </head>
-
 <body>
-    <header>
-        <section class="box">
-            <div class="titulo-principal">
-                <img src="imagens/turing.png" class="img-turing" alt="Alan Turing cartunizado">
-                <h1 class="titulo-centralizado">A bomba eletromecânica</h1>
-            </div>
-        </section>
-    </header>
-
-    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <defs>
-            <symbol id="icon-delete" viewBox="0 0 24 24">
-                <path d="M18.984 3.984v2.016h-13.969v-2.016h3.469l1.031-0.984h4.969l1.031 0.984h3.469zM6 18.984v-12h12v12q0 0.797-0.609 1.406t-1.406 0.609h-7.969q-0.797 0-1.406-0.609t-0.609-1.406z"></path>
-            </symbol>
-            <symbol id="icon-lock" viewBox="0 0 32 32">
-                <path d="M16 20v-4h4v8h-16v-8h4v4h8zM12 8v8h4v-4h8v4h4v-8h-16z"></path>
-            </symbol>
-            <symbol id="icon-defend" viewBox="0 0 32 32">
-                <path d="M24 4v16l-8 8-8-8v-16h16z"></path>
-            </symbol>
-            <symbol id="icon-copy" viewBox="0 0 32 32">
-                <path d="M4 12h16v16h-16v-16zM12 4v4h12v12h4v-16h-16z"></path>
-            </symbol>
-        </defs>
-    </svg>
-
-    <main>
-
-        <ul class="funcionalidades">
-            <il class="encrypt">
-                <div class="btn-small" id="encrypt">
-                    <button id="botao-codifica" class="btn-prop">
-                        <i>
-                            <svg class="icon icon-defend">
-                                <use xlink:href="#icon-defend"></use>
-                            </svg>
-                        </i>
-                        <span class="btn-text">Codifica</span>
-                    </button>
-                </div>
-            </il>
-
+    <div class="grid-layout-container">
         
-            <il class="decrypt">
-                <div class="btn-small" id="decrypt">
-                    <button id="botao-decodifica" class="btn-prop">
-                        <i>
-                            <svg class="icon icon-lock">
-                                <use xlink:href="#icon-lock"></use>
-                            </svg>
-                        </i>
-                        <span class="btn-text">Decodifica</span>
-                    </button>
-                </div>
-            </il>
+        <header id="header">
+            <div class="logo">
+                <img src="img/png/alura.png" alt="Logo da alura">
+            </div>
+        </header>
 
-            <il class="copy">
-                <div class="btn-small" id="copy">
-                    <button id="botao-copia" class="btn-prop">
-                        <i>
-                            <svg class="icon icon-copy">
-                                <use xlink:href="#icon-copy"></use>
-                            </svg>
-                        </i>
-                        <span class="btn-text">Copiar</span>
-                    </button>
-                </div>
-            </il>
+        <div class="left-column">
+                    
+            <section class="input-container">
+                <textarea 
+                id="input-area" placeholder="Digite seu texto"
+                ></textarea>
+            </section>
 
-            <il class="clean">
-                <div class="btn-small" id="clean">
-                    <button id="botao-limpa" class="btn-prop">
-                        <i>
-                            <svg class="icon icon-delete">
-                                <use xlink:href="#icon-delete"></use>
-                            </svg>
-                        </i>
-                        <span class="btn-text">Limpar</span>
+            <section class="btn-container">
+                    <button id="encrypt" class="btn-mid"> 
+                        Codifica
                     </button>
-                </div>
-            </il>
-        </ul>
-
-        <div class="text-areas">
-            <textarea class="input" type="text" id="texto-input" cols="30" rows="30" style="resize: none" autofocus></textarea>
-               
-            <textarea class="output" type="text" id="texto-output" cols="30" rows="30" style="resize: none"></textarea>
+                    <button id="decrypt" class="btn-mid">
+                        Decodifica
+                    </button>
+            </section>
         </div>
-                     
 
-        <script src="script/script.js"></script>
-    </main>
+        <div class="right-column">
+            <section class="output-container">
+                <textarea id="output-area" readonly></textarea>
+            </section>
+        </div>
 
-    <footer>
-        <p> &copy; Copyright Gustavão Almeidão!
-        <p>
-            <a href="https://www.linkedin.com/in/gustavo-saturnino/"><img src="imagens/linkedin.png"
-                    class="img-icone"></a>
-            <a href="https://www.github.com/gussatt"><img src="imagens/github.png" class="img-icone"></a>
-    </footer>
+        <footer id="footer">
+
+        </footer>
+    </div>
+
+    
+
 </body>
 
 </html>
