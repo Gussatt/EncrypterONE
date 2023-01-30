@@ -1,15 +1,17 @@
-const textoInput= document.getElementById("texto-input"); // Puxa o valor colocado na tag textarea
-const textoOutput= document.getElementById("texto-output"); // Puxa o valor do textarea já codificado
-const botaoDecodifica= document.getElementById("botao-decodifica"); // Nem preciso explicar né?
-const botaoCodifica= document.getElementById("botao-codifica"); // Puxa o valor do botão para codificar
-const botaoCopia= document.getElementById("botao-copia"); // Puxa o valor do botão de copiar
-const botaoLimpa= document.getElementById("botao-limpa"); // Puxao o valor do botão de limpar
+const inputText= document.getElementById("input-area");
+const outputText= document.getElementById("output-area");
+const resultOn = document.querySelector(".result-on");
+const resultOff = document.querySelector(".result-off");
+const encryptBtn= document.getElementById("encrypt"); 
+const decryptBtn= document.getElementById("decrypt");
+const copyBtn= document.getElementById("copy");
+const botaoLimpa= document.getElementById("botao-limpa"); 
 
 let cripto= "";
                 
-function codifica(){
+function encryption(){
     
-    cripto= textoInput.value;
+    cripto= inputText.value;
     cripto= cripto.toLowerCase();
 
     cripto= cripto.replace(/e/g, "enter"); //A letra "e" é convertida para "enter"
@@ -18,13 +20,11 @@ function codifica(){
     cripto= cripto.replace(/o/g, "ober"); //A letra "o" é convertida para "ober"
     cripto= cripto.replace(/u/g, "ufat"); //A letra "u" é convertida para "ufat"
                     
-    textoOutput.value=cripto;
-
+    outputText.value=cripto;
 
 }
 
-
-function decodifica(){
+function decryption(){
      
     let decripto= "" ;
 
@@ -34,20 +34,24 @@ function decodifica(){
     decripto= decripto.replace(/ober/g, "o"); //Ober vira o
     decripto= decripto.replace(/ufat/g, "u"); //Ufat vira u
 
-    textoOutput.value=decripto;
+    outputText.value=decripto;
                     
 }
             
+function toggleResult() {
+    resultOff.classList.toggle("hidden");
+    resultOn.classList.toggle("hidden");
+}
                 
 function copiar(){
     
-    textoCopiado= textoOutput
+    copiedText= outputText;
 
-    textoCopiado.select();
+    copiedText.select();
 
-    textoCopiado.setSelectionRange(0,99999);
+    copiedText.setSelectionRange(0,99999);
 
-    navigator.clipboard.writeText(textoCopiado.value);
+    navigator.clipboard.writeText(copiedText.value);
 }
 
 function limpar(){
@@ -72,7 +76,6 @@ function checaLetras(inputTxt){
 
 //Adição de funcionalidades aos botões 
 
-botaoCodifica.addEventListener("click", codifica); 
-botaoDecodifica.addEventListener("click", decodifica);
-botaoCopia.addEventListener("click", copiar);
-botaoLimpa.addEventListener("click", limpar);
+encryptBtn.addEventListener("click", encryption); 
+decryptBtn.addEventListener("click", decryption);
+copyBtn.addEventListener("click", copiar);

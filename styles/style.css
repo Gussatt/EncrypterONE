@@ -1,13 +1,26 @@
+
 .grid-layout-container{
-    width:100vw;
+    max-width: 120rem;
     height:100vh;
     display:grid;
     grid-template-columns: 4fr 2fr;
     grid-template-rows: 1fr 8fr 1fr;
 }
 
+body{
+    background: #CED4DA;
+    font-family: "Inter", sans-serif;
+}
+
 textarea{
+    box-sizing: border-box;
     resize:none;
+    border: none transparent;
+    font-size: 2em;
+}
+
+textarea:focus{
+    outline: none;
 }
 
 #header{
@@ -38,6 +51,9 @@ textarea{
 .input-container textarea{
     width: 100%;
     height: 60vh;
+    background: #CED4DA;
+    border-radius: 20px;
+    padding: 3rem 1.5rem;
 }
 
 .btn-container{
@@ -53,35 +69,74 @@ textarea{
     height: 3rem;
     border: solid 2px blueviolet;
     border-radius: 1em;
-    transition: 0.5s;
+    transition: all 0.5s;
+    font-weight: 500;
 }
 
 .btn-mid:hover{
     background: blueviolet;
-    transition: 0.5s;
+    transition: all 0.5s;
     cursor:pointer;
 }
 
 .right-column{
     grid-column: 2/3;
     grid-row:1/3;
+    margin: 2rem 3rem 0 2rem;
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
 }
 
-.output-container{
-    box-sizing: border-box;
-    padding: 2em 3em 2em 0;
-    display:flex;
-    width: 100%;
-    justify-content: center ;
+.result-off{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    transition: all 0.3s;
+}
+
+.result-on{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+    transition: all 0.3s;
+}
+
+.result-text{
+    align-self: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.no-result{
+    visibility: hidden;
+    opacity: 0;
 }
 
 .output-container textarea{
-    flex-grow: 1;
+    flex-grow: 0.8;
+}
+
+.output-container button{
+    align-self: center;
 }
 
 #footer{
     grid-column: 1/3;
     grid-row:3/4;
-    background: lightgray;
+    background: #CED4DA;
 }
 
