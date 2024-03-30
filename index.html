@@ -1,74 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Bombe</title>
-</head>
-<body>
+  </head>
 
-    <main>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="img/png/alura.png" alt="Logo da alura" />
+      </div>
+    </header>
+    <main class="main">
+      <section class="inputSide">
+        <textarea
+          id="inputArea"
+          class="inputArea"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <section class="btnContainer">
+          <button id="encrypt" class="btnMid">Codifica</button>
+          <button id="decrypt" class="btnMid">Decodifica</button>
+        </section>
+      </section>
+      <section class="resultSide">
+        <img
+          src="img/png/girl.png"
+          alt="Garota com uma lupa analisando um diamante"
+          class="resultImg"
+        />
 
-        <div class="grid-layout-container">
-            
-            <header id="header">
-                <div class="logo">
-                    <img src="img/png/alura.png" alt="Logo da alura">
-                </div>
-            </header>
-
-            <div class="left-column">
-                    
-                <section class="input-container">
-                    <textarea 
-                    id="input-area" placeholder="Digite seu texto"
-                    ></textarea>
-                </section>
-
-                <section class="btn-container">
-                        <button id="encrypt" class="btn-mid"> 
-                            Codifica
-                        </button>
-                        <button id="decrypt" class="btn-mid">
-                            Decodifica
-                        </button>
-                </section>
-            </div>
-
-            <div class="right-column">
-                
-                <section class="result-off">
-                    <img src="img/png/girl.png" 
-                    alt="Garota com uma lupa analisando um diamante" 
-                    class="output-img">
-                    <h2 class="result-text"> Nenhum texto econtrado</h2>
-                </section>
-
-
-                <section class="result-on hidden">
-                    <textarea id="output-area" readonly></textarea>
-                    <button id="copy" class="btn-mid">
-                        Copia
-                    </button>
-                </section>
-
-            </div>
-
-        
-            <footer id="footer">
-
-            </footer>
-        </div>
+        <textarea name="output" id="outputArea" class="outputArea resultOn"></textarea>
+      </section>
     </main>
-    <script src="script/script.js"></script> 
-</body>
-
+    <footer id="footer"></footer>
+    <script src="script/script.js"></script>
+  </body>
 </html>
